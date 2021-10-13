@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../p5lib/p5.js"></script>
+    <script src="../p5lib/p5.sound.min.js"></script>
+    <title>Hjemmeside &bull; Tabeller</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="box">
+        <div class="boxHeader">
+            <h1>Matematik tabeller</h1>
+        </div>
+        <div class="boxText">
+            <p>
+                <p id="minListe"></p>
+                <script>
+                                    
+                const number = parseInt(prompt('Vælg et tal:'));
+                let list = document.getElementById("minListe")
+
+                const arr = [];
+
+                for(let i = 1; i <= 10; i++) {
+
+                    const result = i * number;
+                    
+                    arr.push(result)
+                    console.log(arr)
+                }
+
+
+                let text = "<ul>";
+                arr.forEach(writeLi);
+                text += "</ul>";
+                document.getElementById("minListe").innerHTML = text;
+
+                function writeLi(value) {
+                    text += "<li>" + value + "</li>";
+                }
+                </script>
+                <br><br>
+                <p class="underline"><a href="tabel.html">» Vælg et nyt nummer</a></p>
+                <p class="underline"><a href="index.html">» Tilbage</a></p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
